@@ -18,3 +18,11 @@ for d in data:
 	if len(d) <= 100:
 		new.append(d)
 print('There are totally', len(new), 'comments which have less than 100 words.')
+
+
+good = []
+for g in data:
+	if 'good' in g:
+		good.append(g)
+print('There are totally', len(good), 'comments which include "good".')
+print(good[0])
