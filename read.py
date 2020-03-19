@@ -1,7 +1,7 @@
 data = []
 count = 0
-with open('reviews.txt', 'r') as f:
-	for line in f:
+with open('reviews.txt', 'r') as r:
+	for line in r:
 		data.append(line)
 		count += 1
 		if count % 10000 == 0:
@@ -11,4 +11,4 @@ print('Finish loading, there are totally', len(data), 'sets of data.')
 sum_len = 0
 for d in data:
 	sum_len += len(d)
-print('And the average length of the comments is', sum_len / len(data))
+print('The average length of each comment is', sum_len / len(data), 'word.')
